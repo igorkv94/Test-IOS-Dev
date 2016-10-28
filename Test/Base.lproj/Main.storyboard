@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-Bu-Ivx">
+                                <rect key="frame" x="90" y="124" width="140" height="50"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XER-8O-CIZ">
+                                <rect key="frame" x="120" y="298" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8tv-Y4-Xod"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbL-Fh-bZa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-bn-e8w">
+                                <rect key="frame" x="120" y="222" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IsJ-cY-Kbv"/>
+                                    <constraint firstAttribute="width" constant="80" id="bOE-BC-pQa"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="showResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzM-a3-j9V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dca-bn-e8w" firstAttribute="trailing" secondItem="XER-8O-CIZ" secondAttribute="trailing" id="3CT-lM-hOt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XER-8O-CIZ" secondAttribute="bottom" constant="240" id="BZp-tJ-kL9"/>
+                            <constraint firstItem="Dca-bn-e8w" firstAttribute="top" secondItem="1OT-Bu-Ivx" secondAttribute="bottom" constant="48" id="F6s-jT-S8O"/>
+                            <constraint firstItem="1OT-Bu-Ivx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="KXY-hH-snP"/>
+                            <constraint firstItem="1OT-Bu-Ivx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="YKt-NX-Dll"/>
+                            <constraint firstItem="1OT-Bu-Ivx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cSb-vK-LJS"/>
+                            <constraint firstItem="Dca-bn-e8w" firstAttribute="centerX" secondItem="1OT-Bu-Ivx" secondAttribute="centerX" id="llu-TO-YWc"/>
+                            <constraint firstItem="XER-8O-CIZ" firstAttribute="top" secondItem="Dca-bn-e8w" secondAttribute="bottom" constant="46" id="u17-O1-6VP"/>
+                            <constraint firstItem="XER-8O-CIZ" firstAttribute="leading" secondItem="Dca-bn-e8w" secondAttribute="leading" id="xbR-i4-AVA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="clearBut" destination="XER-8O-CIZ" id="XjE-5E-vv0"/>
+                        <outlet property="resultLab" destination="1OT-Bu-Ivx" id="1cU-qK-ZEz"/>
+                        <outlet property="startBut" destination="Dca-bn-e8w" id="LfD-r7-yLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
